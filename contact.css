@@ -1,0 +1,303 @@
+/* ═══════════════════════════════════════════════
+   CONTACT PAGE — contact.css
+   Vesora Films
+   ═══════════════════════════════════════════════ */
+
+/* ---- CONTACT HERO ---- */
+.contact-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(160deg, #1a1612 0%, #2c2420 35%, #0e0e0e 70%, #1c1c1c 100%);
+}
+
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.contact-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease 0.3s forwards;
+}
+
+.contact-hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 6px;
+  font-weight: 300;
+  color: var(--champagne);
+  opacity: 0;
+  animation: fadeUp 1s ease 0.6s forwards;
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- CONTACT INTRO ---- */
+.contact-intro {
+  background: var(--cream);
+  padding: 80px 5% 60px;
+  text-align: center;
+}
+
+.contact-intro-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.contact-intro-lead {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--dark);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.contact-intro-body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.88rem, 1.5vw, 1rem);
+  font-weight: 300;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* ---- FORM SECTION ---- */
+.contact-form-section {
+  background: var(--cream);
+  padding: 0 5% 100px;
+}
+
+.contact-form-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid rgba(201,169,110,0.2);
+  border-radius: 2px;
+  padding: 60px 56px;
+}
+
+/* ---- FORM ROWS ---- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.form-row-full {
+  grid-template-columns: 1fr;
+}
+
+/* ---- FORM GROUPS ---- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #8a6d3b;
+}
+
+.form-input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--dark);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(44,44,44,0.25);
+  padding: 10px 0;
+  outline: none;
+  transition: border-color 0.25s ease;
+  width: 100%;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-input::placeholder {
+  color: #bbb;
+  font-style: italic;
+  font-size: 0.83rem;
+}
+
+.form-input:focus {
+  border-bottom-color: var(--champagne);
+}
+
+.form-input:focus::placeholder {
+  color: transparent;
+}
+
+/* Date input color fix */
+input[type="date"].form-input {
+  color: var(--dark);
+}
+input[type="date"].form-input::-webkit-datetime-edit-text,
+input[type="date"].form-input::-webkit-datetime-edit-month-field,
+input[type="date"].form-input::-webkit-datetime-edit-day-field,
+input[type="date"].form-input::-webkit-datetime-edit-year-field {
+  color: var(--dark);
+}
+
+/* Select */
+.form-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A96E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  padding-right: 24px;
+}
+
+.form-select option[disabled] { color: #bbb; }
+
+/* Textarea */
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.7;
+  padding: 10px 0;
+}
+
+/* ---- SUBMIT ROW ---- */
+.form-submit-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.form-note {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #999;
+  max-width: 380px;
+}
+
+.form-note em {
+  color: var(--rose);
+  font-style: italic;
+}
+
+.form-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  padding: 16px 36px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+  border-radius: 1px;
+  white-space: nowrap;
+}
+
+.form-submit-btn:hover {
+  background: #8a6d3b;
+  transform: translateY(-1px);
+}
+
+.form-submit-btn:active { transform: translateY(0); }
+
+.btn-arrow {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.form-submit-btn:hover .btn-arrow { transform: translateX(4px); }
+
+/* ---- MESSAGES ---- */
+.form-message {
+  display: none;
+  margin-top: 28px;
+  padding: 18px 24px;
+  border-radius: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.form-message.visible { display: block; }
+
+.form-success {
+  background: rgba(201,169,110,0.1);
+  border-left: 3px solid var(--champagne);
+  color: #8a6d3b;
+}
+
+.form-error {
+  background: rgba(196,160,160,0.12);
+  border-left: 3px solid var(--rose);
+  color: #a07070;
+}
+
+.form-error a { color: var(--rose); text-decoration: underline; }
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .contact-form-wrap {
+    padding: 40px 28px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .form-submit-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .form-submit-btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .contact-hero-title { font-size: 2.8rem; }
+  .contact-form-section { padding: 0 4% 72px; }
+  .contact-form-wrap { padding: 32px 20px; }
+}

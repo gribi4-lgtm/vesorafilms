@@ -1,0 +1,358 @@
+/* ═══════════════════════════════════════════════
+   ABOUT PAGE — about.css
+   Vesora Films
+   ═══════════════════════════════════════════════ */
+
+/* ---- ABOUT HERO ---- */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(160deg, #1a1612 0%, #2c2420 35%, #0e0e0e 70%, #1c1c1c 100%);
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.about-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease 0.3s forwards;
+}
+
+.about-hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 6px;
+  font-weight: 300;
+  color: var(--champagne);
+  opacity: 0;
+  animation: fadeUp 1s ease 0.6s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- ABOUT INTRO ---- */
+.about-intro {
+  background: var(--cream);
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.about-intro-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-intro-lead {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--dark);
+  margin-bottom: 36px;
+  line-height: 1.5;
+}
+
+.about-intro-body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--dark);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ---- PHILOSOPHY (dark section) ---- */
+.about-philosophy {
+  position: relative;
+  padding: 100px 5%;
+  overflow: hidden;
+}
+
+.about-philosophy-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #1a1a1a 0%, #2c2c2c 40%, #1e1e1e 100%);
+}
+
+.about-philosophy-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+}
+
+.about-philosophy-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.philosophy-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 64px;
+  letter-spacing: 1px;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.philosophy-card {
+  padding: 40px 32px;
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  border-radius: 2px;
+  transition: border-color 0.4s ease, transform 0.4s ease;
+}
+
+.philosophy-card:hover {
+  border-color: rgba(201, 169, 110, 0.5);
+  transform: translateY(-4px);
+}
+
+.philosophy-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--champagne);
+  display: block;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.philosophy-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+.philosophy-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ---- QUOTE SECTION ---- */
+.about-quote-section {
+  background: var(--cream);
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.about-quote-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--dark);
+  margin-bottom: 24px;
+}
+
+.about-quote-attribution {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #8a6d3b;
+  font-weight: 400;
+}
+
+/* ---- WHAT SETS US APART ---- */
+.about-difference {
+  background: #EDE8E2;
+  padding: 100px 5%;
+}
+
+.about-difference-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-diff-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 64px;
+  letter-spacing: 1px;
+}
+
+.about-diff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+.about-diff-item {
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.diff-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 20px;
+  color: #8a6d3b;
+}
+
+.diff-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.about-diff-item h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 14px;
+}
+
+.about-diff-item p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #555;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .about-hero { height: 55vh; min-height: 340px; }
+  .about-hero-title { font-size: 2.8rem; }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .philosophy-card { padding: 32px 24px; }
+
+  .about-diff-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-intro { padding: 72px 6%; }
+  .about-philosophy { padding: 72px 5%; }
+  .about-quote-section { padding: 72px 6%; }
+  .about-difference { padding: 72px 5%; }
+}
+
+@media (max-width: 480px) {
+  .about-hero-title { font-size: 2.2rem; }
+  .about-hero-subtitle {
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .philosophy-num { font-size: 2rem; }
+}
+
+/* ---- STORY COLUMNS (3-col text section) ---- */
+.about-story {
+  background: var(--cream);
+  padding: 0 5% 100px;
+}
+
+.about-story-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.story-col {
+  text-align: center;
+  padding: 0 8px;
+}
+
+.story-col-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.story-col-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--champagne);
+  margin: 16px auto 0;
+}
+
+.story-col p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .about-story-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-story { padding: 0 6% 72px; }
+}
