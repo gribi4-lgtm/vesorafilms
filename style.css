@@ -520,6 +520,9 @@ ul { list-style: none; }
 @media (max-width: 600px) {
   #navbar { padding: 14px 20px; }
 
+  .nav-logo { height: 60px; }
+  .logo-img { height: 120px; }
+
   /* Larger touch target for hamburger */
   .hamburger { padding: 10px; }
 
