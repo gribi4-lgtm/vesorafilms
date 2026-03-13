@@ -149,6 +149,7 @@
 
 .faq-answer > p {
   overflow: hidden;
+  min-height: 0;
 }
 
 .faq-answer p {
