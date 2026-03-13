@@ -285,7 +285,7 @@ ul { list-style: none; }
   background: #F5F0EB;
   padding: 80px 5%;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .love-title {
