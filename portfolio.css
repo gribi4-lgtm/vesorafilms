@@ -1,0 +1,108 @@
+/* =============================================
+   VESORA FILMS — portfolio.css
+   Mobile-first, fully responsive
+   ============================================= */
+
+/* ---- PORTFOLIO HERO ---- */
+.port-hero {
+  position: relative;
+  /* Mobile: shorter hero so films start sooner */
+  height: clamp(280px, 45vh, 55vh);
+  background: linear-gradient(160deg, #0e0c09 0%, #1a1410 40%, #0a0a0a 100%);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.port-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+}
+
+.port-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px clamp(36px, 6vh, 70px);
+}
+
+.port-hero-eyebrow {
+  font-size: clamp(0.55rem, 1.5vw, 0.65rem);
+  letter-spacing: clamp(3px, 1vw, 6px);
+  color: #C9A96E;
+  font-weight: 300;
+  margin-bottom: 14px;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: heroFadeUp 0.9s 0.2s forwards;
+}
+
+.port-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 10vw, 7rem);
+  font-weight: 300;
+  color: #F5F0EB;
+  letter-spacing: clamp(-1px, -0.3vw, -2px);
+  line-height: 1;
+  margin-bottom: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeUp 1s 0.4s forwards;
+}
+
+.port-hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+  color: rgba(245,240,235,0.55);
+  font-weight: 300;
+  opacity: 0;
+  animation: heroFadeUp 1s 0.65s forwards;
+}
+
+@keyframes heroFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- FILM INFO (couple name shown on hover / always on mobile) ---- */
+.film-info {
+  position: absolute;
+  bottom: clamp(16px, 4vh, 36px);
+  left: clamp(20px, 5vw, 48px);
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Show on hover (desktop) */
+.film-panel:hover .film-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.film-info-eyebrow {
+  font-size: clamp(0.55rem, 1.2vw, 0.6rem);
+  letter-spacing: clamp(2px, 0.8vw, 4px);
+  color: #C9A96E;
+  font-weight: 300;
+  margin-bottom: 6px;
+}
+
+.film-info-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 3.5vw, 2rem);
+  font-weight: 300;
+  color: #F5F0EB;
+  letter-spacing: -0.5px;
+}
+
+/* Mobile: always show film info (no hover on touch) */
+@media (hover: none), (max-width: 768px) {
+  .film-info {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

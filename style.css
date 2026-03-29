@@ -560,3 +560,128 @@ ul { list-style: none; }
     letter-spacing: 2px;
   }
 }
+
+/* =============================================
+   SCROLL REVEAL ANIMATIONS
+   ============================================= */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Film panels — slightly longer transition for cinematic feel */
+.film-panel.reveal-up {
+  transition: opacity 1s ease, transform 0.9s ease;
+}
+
+/* Intro text — cascade */
+.intro-tagline.reveal-up { transition-delay: 0ms; }
+.intro-sub.reveal-up     { transition-delay: 120ms; }
+.intro-body.reveal-up    { transition-delay: 240ms; }
+
+/* CTA section */
+.cta-heading.reveal-up { transition-delay: 0ms; }
+.cta-link.reveal-up    { transition-delay: 180ms; }
+
+/* Footer strip */
+.ig-label.reveal-up { transition-delay: 0ms; }
+.ig-note.reveal-up  { transition-delay: 120ms; }
+
+/* =============================================
+   MOBILE-FIRST FILM PANEL FIXES
+   ============================================= */
+
+/* Desktop: keep 70vh panels */
+/* Mobile: reduce to 55vw height so all 3 fit comfortably above fold on scroll */
+@media (max-width: 768px) {
+  .film-panel {
+    height: 55vw;
+    min-height: 240px;
+  }
+
+  /* Play button — always visible on mobile (no hover) */
+  .film-play {
+    opacity: 1;
+  }
+
+  .play-label {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+  }
+
+  .play-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .play-circle svg {
+    width: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .film-panel {
+    height: 60vw;
+    min-height: 200px;
+  }
+}
+
+/* =============================================
+   FIX: SCALABLE LABELS ON MOBILE
+   ============================================= */
+
+/* play-label inside film panels */
+.play-label {
+  font-size: clamp(0.6rem, 1.3vw, 0.75rem);
+  letter-spacing: clamp(2px, 1vw, 5px);
+  white-space: nowrap;
+}
+
+/* intro-sub on homepage — short enough to stay on one line */
+.intro-sub {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: clamp(0.5rem, 1.3vw, 0.72rem);
+  letter-spacing: clamp(1px, 0.8vw, 4px);
+}
+
+/* CTA heading */
+.cta-heading {
+  font-size: clamp(1.4rem, 5vw, 4rem);
+}
+
+/* HERO SUBTITLES — all inner pages
+   All spaces now use &nbsp; in HTML so text never wraps mid-word.
+   white-space:nowrap keeps it on one line.
+   Parent hero has overflow:hidden which clips gracefully. */
+.about-hero-subtitle,
+.contact-hero-subtitle,
+.pkg-hero-subtitle,
+.faq-hero-subtitle {
+  /* Normal words — browser wraps between words, not letters */
+  font-size: clamp(0.55rem, 1.5vw, 0.7rem);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-weight: 300;
+  word-spacing: 8px;
+  /* Allow wrapping at word boundaries */
+  white-space: normal;
+  line-height: 1.8;
+}
+
+/* Mobile: reduce spacing to keep lines short */
+@media (max-width: 600px) {
+  .about-hero-subtitle,
+  .contact-hero-subtitle,
+  .pkg-hero-subtitle,
+  .faq-hero-subtitle {
+    letter-spacing: 4px;
+    word-spacing: 4px;
+    font-size: 0.6rem;
+  }
+}

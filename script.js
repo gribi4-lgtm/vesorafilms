@@ -131,3 +131,51 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+/* ---- 5. SCROLL REVEAL (IntersectionObserver) ---- */
+(function initScrollReveal() {
+  const selectors = [
+    '.intro-tagline',
+    '.intro-sub',
+    '.intro-body',
+    '.film-panel',
+    '.love-title',
+    '.cta-heading',
+    '.cta-link',
+    '.ig-label',
+    '.ig-note',
+  ];
+
+  selectors.forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => el.classList.add('reveal-up'));
+  });
+
+  // Stagger film panels
+  document.querySelectorAll('.film-panel').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 100}ms`;
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+
+  document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+})();
+
+/* ---- 6. PARALLAX SCROLL — hero panel softly moves at 25% scroll speed ---- */
+(function initParallax() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < window.innerHeight * 1.2) {
+      hero.style.transform = `translateY(${window.scrollY * 0.22}px)`;
+    }
+  }, { passive: true });
+})();
+
+/* subtitle scaling removed — using CSS letter-spacing on real words */

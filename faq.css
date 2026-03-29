@@ -173,13 +173,6 @@
 
 @media (max-width: 600px) {
   .faq-hero { height: 50vh; min-height: 300px; }
-  .faq-hero-subtitle {
-    font-size: 0.5rem;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 100%;
-  }
   .faq-question { font-size: 1rem; padding: 22px 0; }
   .faq-section { padding: 20px 5% 72px; }
 }

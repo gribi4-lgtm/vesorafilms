@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — VESORA FILMS</title>
+  <meta name="description" content="Watch our cinematic wedding and event films. Real couples, real emotion, unrivaled storytelling.">
+  <meta name="author" content="Vesora Films">
+  <meta property="og:title" content="Portfolio — Vesora Films">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo" aria-label="Vesora Films">
+      <img class="logo-img logo-white" src="logo-white.png" alt="Vesora Films">
+      <img class="logo-img logo-dark"  src="logo-dark.png"  alt="Vesora Films">
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Full-Screen Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul>
+      <li><a href="index.html"     class="mob-link">H O M E</a></li>
+      <li><a href="about.html"     class="mob-link">A B O U T</a></li>
+      <li><a href="portfolio.html" class="mob-link">P O R T F O L I O</a></li>
+      <li><a href="contact.html"   class="mob-link">C O N T A C T</a></li>
+      <li><a href="packages.html"  class="mob-link">P A C K A G E S</a></li>
+      <li><a href="faq.html"       class="mob-link">F A Q</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== PORTFOLIO HERO ===== -->
+  <section class="port-hero">
+    <div class="port-hero-overlay"></div>
+    <div class="port-hero-content">
+      <p class="port-hero-eyebrow">O U R &nbsp; W O R K</p>
+      <h1 class="port-hero-title">The Films</h1>
+      <p class="port-hero-sub"><em>Every frame, a feeling.</em></p>
+    </div>
+  </section>
+
+  <!-- ===== 3 FILM PANELS (same style as homepage) ===== -->
+  <section class="films" id="films">
+
+    <!-- Film 1 — replace data-video-id with your YouTube/Vimeo ID -->
+    <div class="film-panel" id="film1" data-video-id="" data-platform="youtube" role="button" tabindex="0" aria-label="Play Film 1">
+      <div class="film-bg" style="background:linear-gradient(135deg,#2c2420 0%,#1a1210 50%,#3a2e2a 100%)"></div>
+      <div class="film-overlay"></div>
+      <div class="film-play">
+        <span class="play-label">P L A Y &nbsp; F I L M</span>
+        <div class="play-circle">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+      <div class="film-info">
+        <p class="film-info-eyebrow">W E D D I N G &nbsp;·&nbsp; 2025</p>
+        <p class="film-info-title">Sarah &amp; James</p>
+      </div>
+    </div>
+
+    <!-- Film 2 -->
+    <div class="film-panel" id="film2" data-video-id="" data-platform="youtube" role="button" tabindex="0" aria-label="Play Film 2">
+      <div class="film-bg" style="background:linear-gradient(135deg,#1e2430 0%,#0e1520 50%,#2a3040 100%)"></div>
+      <div class="film-overlay"></div>
+      <div class="film-play">
+        <span class="play-label">P L A Y &nbsp; F I L M</span>
+        <div class="play-circle">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+      <div class="film-info">
+        <p class="film-info-eyebrow">W E D D I N G &nbsp;·&nbsp; 2025</p>
+        <p class="film-info-title">Elena &amp; Michael</p>
+      </div>
+    </div>
+
+    <!-- Film 3 -->
+    <div class="film-panel" id="film3" data-video-id="" data-platform="youtube" role="button" tabindex="0" aria-label="Play Film 3">
+      <div class="film-bg" style="background:linear-gradient(135deg,#2a2215 0%,#1c1808 50%,#382e18 100%)"></div>
+      <div class="film-overlay"></div>
+      <div class="film-play">
+        <span class="play-label">P L A Y &nbsp; F I L M</span>
+        <div class="play-circle">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+      <div class="film-info">
+        <p class="film-info-eyebrow">I N D I A N &nbsp; W E D D I N G &nbsp;·&nbsp; 2024</p>
+        <p class="film-info-title">Priya &amp; Raj</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <h2 class="cta-heading">Ready to be in the next film?</h2>
+      <a href="contact.html" class="cta-link cta-btn">Let's talk</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <a href="index.html" class="footer-logo" aria-label="Vesora Films">
+      <img class="logo-img logo-dark" src="logo-dark.png" alt="Vesora Films" style="width:180px;margin:0 auto;">
+    </a>
+    <p class="footer-copy">All content Copyright &copy; 2026 Vesora Films</p>
+  </footer>
+
+  <!-- VIDEO LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+      <div class="lightbox-video-wrap" id="lightboxVideoWrap"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="portfolio.js"></script>
+</body>
+</html>
