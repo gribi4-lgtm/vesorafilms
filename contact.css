@@ -298,6 +298,13 @@ input[type="date"].form-input::-webkit-datetime-edit-year-field {
 
 @media (max-width: 480px) {
   .contact-hero-title { font-size: 2.8rem; }
+  .contact-hero-subtitle {
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+  }
   .contact-form-section { padding: 0 4% 72px; }
   .contact-form-wrap { padding: 32px 20px; }
 }

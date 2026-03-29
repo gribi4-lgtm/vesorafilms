@@ -354,4 +354,12 @@
   .pkg-card { padding: 36px 24px 32px; }
   .pkg-hero { height: 50vh; min-height: 300px; }
   .pkg-faq { padding: 60px 5%; }
+
+  .pkg-hero-subtitle {
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+  }
 }
