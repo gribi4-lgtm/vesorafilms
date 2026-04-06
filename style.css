@@ -149,8 +149,8 @@ ul { list-style: none; }
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 500px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   overflow: hidden;
   /* Placeholder cinematic gradient - swap for your real video */
   background: linear-gradient(160deg, #1a1612 0%, #2c2420 35%, #0e0e0e 70%, #1c1c1c 100%);
@@ -166,6 +166,20 @@ ul { list-style: none; }
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+/* Vimeo background embed — always fills hero like object-fit:cover */
+.vimeo-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw;      /* 16:9 ratio */
+  min-height: 100%;
+  min-width: 177.78vh;  /* 16/9 * 100vh */
+  transform: translate(-50%, -50%);
+  border: none;
+  pointer-events: none;
 }
 
 /* ---- INTRO / ABOUT ---- */
@@ -221,16 +235,14 @@ ul { list-style: none; }
   overflow: hidden;
   cursor: pointer;
 }
-/* Cinematic placeholder gradients for each film panel */
-#film1 .film-bg { background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 50%, #3d3533 100%); }
-#film2 .film-bg { background: linear-gradient(135deg, #3a2a2a 0%, #2c1a1a 50%, #4a3030 100%); }
-#film3 .film-bg { background: linear-gradient(135deg, #2a2a3a 0%, #1a1a2c 50%, #303040 100%); }
+/* Removed placeholder gradients that were overriding background-size */
 
 .film-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   transition: transform 0.6s ease;
 }
 .film-panel:hover .film-bg { transform: scale(1.03); }
@@ -285,7 +297,7 @@ ul { list-style: none; }
   background: #F5F0EB;
   padding: 80px 5%;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .love-title {
@@ -302,6 +314,8 @@ ul { list-style: none; }
   display: flex;
   transition: transform 0.5s cubic-bezier(0.77,0,0.18,1);
   will-change: transform;
+  touch-action: pan-y;
+  user-select: none;
 }
 
 .testimonial-slide {
@@ -505,6 +519,51 @@ ul { list-style: none; }
   inset: 0;
   width: 100%; height: 100%;
   border: none;
+}
+
+
+/* ---- FILM PANEL META (couple name + location) ---- */
+.film-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.film-panel:hover .film-meta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.film-couple {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: #fff;
+  letter-spacing: 4px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.film-location {
+  font-size: clamp(0.55rem, 1.1vw, 0.65rem);
+  letter-spacing: 5px;
+  color: #C9A96E;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
+
+/* On mobile — always visible (no hover) */
+@media (max-width: 768px) {
+  .film-meta {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ====================================

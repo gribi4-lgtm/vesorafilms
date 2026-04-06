@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta name="geo.region" content="US-NJ">
     <meta name="geo.placename" content="Clifton, New Jersey">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=10">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
@@ -91,7 +91,6 @@
     <ul>
       <li><a href="index.html" class="mob-link">H O M E</a></li>
       <li><a href="about.html" class="mob-link">A B O U T</a></li>
-      <li><a href="portfolio.html" class="mob-link">P O R T F O L I O</a></li>
       <li><a href="contact.html" class="mob-link">C O N T A C T</a></li>
       <li><a href="packages.html" class="mob-link">P A C K A G E S</a></li>
       <li><a href="faq.html" class="mob-link">F A Q</a></li>
@@ -100,19 +99,15 @@
 
   <!-- ===== HERO — Full-screen image/video ===== -->
   <section class="hero" id="home">
-    <!-- Placeholder ring close-up from Unsplash; swap for your own video later -->
     <div class="hero-media">
-      <img
-        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
-        alt="Diamond ring close-up"
-        class="hero-img"
-        loading="eager"
-      >
-      <!-- Un-comment and fill src when you have a real video:
-      <video autoplay loop muted playsinline class="hero-video">
-        <source src="YOUR_VIDEO.mp4" type="video/mp4">
-      </video>
-      -->
+      <iframe
+        class="vimeo-bg"
+        src="https://player.vimeo.com/video/1179676676?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+        title="Vesora Films header reel"
+      ></iframe>
     </div>
   </section>
 
@@ -138,11 +133,15 @@
   <!-- ===== FILM SHOWCASE — 3 full-width panels ===== -->
   <section class="films" id="films">
 
-    <!-- Film 1 -->
+    <!-- Film 1 — Tim & Sam, New York -->
     <div class="film-panel" id="film1">
-      <div class="film-bg" style="background-image:linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 50%, #3d3533 100%)"></div>
+      <div class="film-bg" data-vimeo-id="1179718034"></div>
       <div class="film-overlay"></div>
-      <div class="film-play" role="button" tabindex="0" aria-label="Play Film 1">
+      <div class="film-play" role="button" tabindex="0" aria-label="Play Tim and Sam film">
+        <div class="film-meta">
+          <span class="film-couple">T I M &amp; S A M</span>
+          <span class="film-location">N E W &nbsp; Y O R K</span>
+        </div>
         <span class="play-label">P L A Y &nbsp; F I L M</span>
         <div class="play-circle">
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
@@ -150,11 +149,14 @@
       </div>
     </div>
 
-    <!-- Film 2 -->
+    <!-- Film 2 — Alexandra & Alek -->
     <div class="film-panel" id="film2">
-      <div class="film-bg" style="background-image:linear-gradient(135deg, #3a2a2a 0%, #2c1a1a 50%, #4a3030 100%)"></div>
+      <div class="film-bg" data-vimeo-id="1179725613"></div>
       <div class="film-overlay"></div>
-      <div class="film-play" role="button" tabindex="0" aria-label="Play Film 2">
+      <div class="film-play" role="button" tabindex="0" aria-label="Play Alexandra and Alek film">
+        <div class="film-meta">
+          <span class="film-couple">A L E X A N D R A &amp; A L E K</span>
+        </div>
         <span class="play-label">P L A Y &nbsp; F I L M</span>
         <div class="play-circle">
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
@@ -162,17 +164,7 @@
       </div>
     </div>
 
-    <!-- Film 3 -->
-    <div class="film-panel" id="film3">
-      <div class="film-bg" style="background-image:linear-gradient(135deg, #2a2a3a 0%, #1a1a2c 50%, #303040 100%)"></div>
-      <div class="film-overlay"></div>
-      <div class="film-play" role="button" tabindex="0" aria-label="Play Film 3">
-        <span class="play-label">P L A Y &nbsp; F I L M</span>
-        <div class="play-circle">
-          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-        </div>
-      </div>
-    </div>
+
 
   </section>
 
@@ -185,28 +177,28 @@
       <!-- Slide 1 -->
       <div class="testimonial-slide">
         <div class="t-photo">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="Sam + T couple">
+          <img src="testimonial-sam-tim.jpg" alt="Sam &amp; Tim couple">
         </div>
         <div class="t-text">
           <blockquote>
             «You are the best of the best! Thank you for giving us the most beautiful wedding film
             we could have ever dreamed of. Forever grateful for you and your team!»
           </blockquote>
-          <p class="t-couple">S A M &nbsp;+&nbsp; T O N Y</p>
+          <p class="t-couple">S A M &nbsp;+&nbsp; T I M</p>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="testimonial-slide">
         <div class="t-photo">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="Elena + Michael couple">
+          <img src="testimonial-alexandra-alek.jpg" alt="Alexandra &amp; Alek couple">
         </div>
         <div class="t-text">
           <blockquote>
             «They captured every emotion, every glance, every tear — in the most cinematic way.
             We re-watch our film almost every anniversary.»
           </blockquote>
-          <p class="t-couple">E L E N A &nbsp;+&nbsp; M I C H A E L</p>
+          <p class="t-couple">A L E X A N D R A &nbsp;+&nbsp; A L E K</p>
         </div>
       </div>
 
@@ -243,7 +235,7 @@
 
   <!-- ===== BOOKING BLOCK ===== -->
   <section class="instagram-block">
-    <p class="ig-label">B A S E D &nbsp; I N &nbsp; C L I F T O N , &nbsp; N J &nbsp;&nbsp;&middot;&nbsp;&nbsp; S E R V I N G &nbsp; N E W &nbsp; J E R S E Y , &nbsp; N E W &nbsp; Y O R K &nbsp; &amp; &nbsp; W O R L D W I D E</p>
+    <p class="ig-label">B A S E D &nbsp; I N &nbsp; N O R T H &nbsp; J E R S E Y &nbsp;&nbsp;&middot;&nbsp;&nbsp; S E R V I N G &nbsp; N E W &nbsp; J E R S E Y , &nbsp; N E W &nbsp; Y O R K &nbsp; &amp; &nbsp; W O R L D W I D E</p>
     <p class="ig-note">Now booking 2026 &amp; 2027 — dates fill up faster than the open bar at an Italian wedding. Don't wait.</p>
   </section>
 
@@ -265,6 +257,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>
